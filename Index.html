@@ -1,49 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FB Bot</title>
-    
-    <!-- Meta Tags for SEO -->
-    <meta name="description" content="Experience automated facebook for just a single appstate!">
-    <meta name="keywords" content="fbbot, facebook bot, mirai, goatbot, playsbot, automated, bot, automated bot, novacrucia">
-    <meta name="author" content="Kenlie Navacilla Jugarap">
-
-    <!-- Open Graph Meta Tags for Facebook -->
-    <meta property="og:title" content="Novacrucia - Automated Facebook Bot">
-    <meta property="og:description" content="Experience automated facebook for just a single appstate!">
-    <meta property="og:image" content="https://fbbot.kenliejugarap.com/novacrucia-logo.png">
-    <meta property="og:url" content="fbbot.kenliejugarap.com">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Novacrucia - Automated Facebook Bot">
-    <meta name="twitter:description" content="Experience automated facebook for just a single appstate!">
-    <meta name="twitter:image" content="https://fbbot.kenliejugarap.com/novacrucia-logo.jpg">
-    <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appstate Getter</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="https://i.imgur.com/cyEbkbj.jpeg">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0"></script>
 </head>
-<body class="bg-gray-900 text-white min-h-screen flex flex-col">
-    <header class="px-8 py-4 flex items-center justify-between">
-        <h1 class="text-3xl font-bold">Novacrucia</h1>
-        <nav class="flex items-center gap-8">
-            <a href="#" class="text-lg hover:underline">Home</a>
-        </nav>
-    </header>
-    <main class="flex flex-1 items-center justify-center text-center px-4 py-8">
-        <div class="space-y-4">
-            <h2 class="text-4xl font-bold tracking-tighter">Welcome user</h2>
-            <p class="text-xl text-gray-300">You are wondering why you're here but still this is the website to redirect to the automated bot link by clicking "Redirect to Official Novacrucia - Automated Facebook Bot Website" you will be redirected directly to the main site.</p>
-            <a href="https://fbbot.net/" class="inline-flex items-center justify-center px-6 py-3 text-lg font-medium bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-md shadow-lg transition-colors">
-                Redirect to Official Novacrucia - Automated Facebook Bot Website
-            </a>
-        </div>
-    </main>
-    <footer class="py-4 bg-gray-800 text-gray-300 text-sm flex items-center justify-center">
-        ©fbbot.kenliejugarap.com. All rights reserved.
-    </footer>
+<body>
+  <div id="particles-js"></div> 
+
+  <div class="container">
+    <form id="loginForm" class="login-form">
+      <h2>FB APPSTATE GETTER</h2>
+      <label for="contact">Email:</label>
+      <input type="email" id="contact" name="contact" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <button type="submit" id="submitButton">Submit</button>
+    </form>
+
+    <section id="responseSection" class="response-section hidden">
+      <h3>YOUR APPSTATE:</h3>
+      <pre id="responseMessage"></pre>
+      <button id="copyButton" class="copy-button">Copy to Clipboard</button>
+    </section>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
